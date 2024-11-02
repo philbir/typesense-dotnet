@@ -54,6 +54,11 @@ public record Field
     [JsonPropertyName("range_index")]
     public bool? RangeIndex { get; init; }
 
+    public Field(FieldType type)
+    {
+        Type = type;
+    }
+    
     // This constructor is made to handle inherited classes.
     protected Field(string name)
     {
